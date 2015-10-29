@@ -23,5 +23,6 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'xray-rails'
+  gem "letter_opener"
 end
 
