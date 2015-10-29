@@ -1,8 +1,8 @@
 class CommentMailer < ActionMailer::Base
-  def comment_created(current_user, post_user, content)
+  def comment_created(current_user, post_owner, content)
 
     @current_user = current_user
-    @post_user = post_user
+    @post_owner = post_owner
     @content = content
 
     mail(to: post_user.email,
