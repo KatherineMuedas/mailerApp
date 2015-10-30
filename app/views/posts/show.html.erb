@@ -1,3 +1,4 @@
+<% content_for(:title, @post.tittle)%>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,10 +10,18 @@
   <strong>Content:</strong>
   <%= @post.content %>
 </p>
-<h2> Comments </h2>
-<%= render @post.comments %>
-<br>
-<%= render 'comments/form' %>
 
+
+<h2> 
+  <%= link_to "Comments", "#", id:"comments-link" %>
+</h2>
+
+<section id="comments-section">
+  <ol id="comments">
+    <%= render @post.comments %>
+  </ol>
+  <br>
+  <%= render 'comments/form' %>
+</section>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

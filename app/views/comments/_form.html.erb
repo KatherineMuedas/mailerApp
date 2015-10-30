@@ -1,9 +1,9 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <div class="field">
+<%= form_for([@post, @post.comments.build] , remote: true) do |f| %>
+  <div>
     <%= f.label :content %><br>
     <%= f.text_area :content %>
   </div>
-  <div class="actions">
+  <div>
     <%= f.submit %>
   </div>
 <% end %>

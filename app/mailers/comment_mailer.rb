@@ -5,7 +5,7 @@ class CommentMailer < ActionMailer::Base
     @post_owner = post_owner
     @content = content
 
-    mail(to: post_user.email,
+    mail(to: post_owner.email,
         from:"experiment@gmail.com",
         subject: "Comment created",
         )
