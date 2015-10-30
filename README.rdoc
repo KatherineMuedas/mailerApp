@@ -1,4 +1,7 @@
 == mailerApp
 
-Sending automated emails with rails. 
+Sending automated emails with rails.
+
+Adding jQuery effects and sending ajax resquests to comments.
+
 
