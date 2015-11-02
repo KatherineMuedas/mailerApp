@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'better_errors'
 
+gem 'sidekiq'
+gem 'sinatra', require: false
 
 group :development, :test do
   

@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        PostMailer.post_created(@user).deliver_now
+        PostMailer.post_created(@user).deliver_later!(wait: 30.seconds)
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
